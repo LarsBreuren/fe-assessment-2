@@ -1,0 +1,184 @@
+/* import */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* General styling */
+body {
+    background-image: url("../images/bg.jpg");
+    /* https://www.pexels.com/photo/multicolored-smoke-1020315/*/
+    height: 100vh;
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+}
+
+p {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Form */
+label {
+    color: #fff;
+}
+
+input,
+label {
+    width: 50%;
+    margin: 1em 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.formblock {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid #0151D4;
+    width: 400px;
+    margin: auto;
+    padding: 1em;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Form output styling */
+.details {
+    margin-top: 50px;
+    border: 2px solid #EE4A60;
+    opacity: 0;
+    height: auto;
+    transition: 300ms;
+}
+
+.details p {
+    width: 50%;
+    margin: 10px 0;
+}
+
+.details .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.details h2 {
+    font-size: 1em;
+    color: #fff;
+}
+
+/* Form validation */
+#submit {
+    border: none;
+    opacity: 0;
+    height: 0;
+    background-image: linear-gradient(271deg, #0151D4, #EE4A60 47%, #EA707F);
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    padding: 1em;
+    transition: 300ms;
+}
+
+a {
+    text-decoration: none;
+    margin: auto;
+    width: 200px;
+    background-image: linear-gradient(271deg, #0151D4, #EE4A60 47%, #EA707F);
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    padding: 1em;
+    transition: 300ms;
+}
+
+.thanks {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#submit:hover {
+    background-image: linear-gradient(271deg, #EE4A60, #0151D4 47%, #6FBFD0);
+}
+
+input:valid {
+    border: 2px solid limegreen;
+}
+
+.field4,
+.field3,
+.field2 {
+    opacity: 0;
+    height: 0;
+    transition: 300ms;
+    margin: 0;
+}
+
+.field3:valid~#submit,
+.field1:valid~.field2,
+.field2:valid~.field3,
+.field3:valid~.field4 {
+    opacity: 1;
+    height: auto;
+    margin: 1em 0;
+}
+
+/* Loading bar */
+.bardiv {
+    opacity: 0;
+    height: 0;
+}
+
+#bar {
+    background-image: linear-gradient(271deg, #0151D4, #EE4A60 47%, #EA707F);
+    height: 40px;
+    width: 10%;
+    transition: 1s;
+}
+
+form .uploadBtn {
+    opacity: 0;
+    height: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#profileimg {
+    border: 0;
+    color: #fff;
+}
+
+body .unhide {
+    opacity: 1;
+    height: auto;
+}
+
+#barcontainer {
+    width: 100%;
+}
+
+.bardiv p {
+    text-align: center;
+    margin: 0;
+    padding: 11px 0;
+    transition: 2s;
+}
+
+@media only screen and (max-width: 550px) {
+    .formblock {
+        width: 95%;
+    }
+}
